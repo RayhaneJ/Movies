@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject IRepository repository
+
+<div>
+    <h3>Movie</h3>
+    <MoviesList Movies=@movies>
+
+    </MoviesList>
+</div>
+
+@code {
+    private List<Movie> movies;
+
+    protected async override Task OnInitializedAsync()
+    {
+        await Task.Delay(3000);
+        movies = repository.GetMovies();
+
+    }
+}

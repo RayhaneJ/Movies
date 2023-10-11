@@ -1,0 +1,15 @@
+﻿<h3>Image</h3>
+
+@if(Url is null)
+{
+    <img style="max-width: 100%; max-height: 100%" src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-question-mark-vector-icon-png-image_3722522.jpg" />
+}
+else
+{
+    <img style="max-width: 100%; max-height: 100%" src="@Url">
+}
+
+@code {
+    [Parameter]
+    public string Url { get; set; }
+}"
